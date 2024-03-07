@@ -1,19 +1,19 @@
-Steps to connect github credentials to client application using Oauth 
+# Steps to connect github credentials to client application using Oauth 
 
 
-1> Create Account in GIthub
-2> Go to Developer Settings in Github and create OAuth applicaticon with Application Url and Callback Url.
+### 1> Create Account in GIthub
+### 2> Go to Developer Settings in Github and create OAuth applicaticon with Application Url and Callback Url.
 (Profile -> Settings -> Developer Settings -> Oauth Apps)
-3> After application got created it will provide Client Id and Client Secret. Note down client id and client secret.
-4> Create SpringBoot web application with below dependencies
-  1) Spring-boot-starter-web
-  2) spring-cloud-starter-oauth2
+### 3> After application got created it will provide Client Id and Client Secret. Note down client id and client secret.
+### 4> Create SpringBoot web application with below dependencies
+ ##### 1) Spring-boot-starter-web
+ ##### 2) spring-cloud-starter-oauth2
   3) spring-cloud-starter-security
 
-5> use @EnableOAuth2sso annotation at SpringBoot start class
-6> Use RestController annotation at SpringBoot start class to represent that class as a distribiuted component and write one distributed method.
+### 5> use @EnableOAuth2Sso annotation at SpringBoot start class Note: In Sprig Boot 3.0 onword no need to add this annotation
+### 6> Use RestController annotation at SpringBoot start class to represent that class as a distribiuted component and write one distributed method.
 
-7> Write below Oauth configureation in application.yml file
+### 7> Write below Oauth configureation in application.yml file
 Security:
  oauth2:
    client:
@@ -24,7 +24,7 @@ Security:
      clientAuthenticationScheme: form
    resource:user-info-uri: https://api.github.com/user
 
-8> change Embedded Container port number in application.yml file 
+#### 8> change Embedded Container port number in application.yml file 
     server:
       port:2222
-9> start SpringBoot application and send request to rest api method.
+#### 9> start SpringBoot application and send request to rest api method.
