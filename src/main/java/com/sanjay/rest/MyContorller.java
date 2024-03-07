@@ -1,0 +1,16 @@
+package com.sanjay.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MyContorller {
+	
+	@GetMapping("/")
+	public String welcomeGreating()
+	{
+		return "Welcome to sanjay Tutorials!!!......";
+	}
+
+
+}

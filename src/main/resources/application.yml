@@ -1,0 +1,11 @@
+    
+ spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: 56467678hjhikjoi7868
+            clientSecret: 28879b6bbf54f9a10dc01jjj28bf13061278a21eb0095
+  resource:
+        user-info-uri: https://api.github.com/user
